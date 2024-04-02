@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.7/dist/sweetalert2.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <p>Admission form</p>
+      <form  method="post" id="form">
+        <div class="form_wrapper">
+          <div class="lable_wrapper">
+            <i class="bx bx-book-content"></i>
+            <label for="">Select Course</label>
+          </div>
+          <select name="COURSE">
+            <option value="--">----</option>
+            <option value="VYAPAM">VYAPAM</option>
+            <option value="CGPSC">CGPSC</option>
+            <option value="RAILWAY">RAILWAY</option>
+            <option value="FOUNDATION">FOUNDATION</option>
+            <option value="TET">TET</option>
+            <option value="SSC">SSC</option>
+            <option value="AGNEVEER">AGNEVEER</option>
+          </select>
+        </div>
+        <div class="form_wrapper">
+          <div class="lable_wrapper">
+            <i class="bx bx-user"></i>
+            <label for="">Name</label>
+          </div>
+          <input name="NAME" type="text" required />
+        </div>
+        <div class="form_wrapper">
+          <div class="lable_wrapper">
+            <i class="bx bx-envelope"></i>
+            <label for="">Email</label>
+          </div>
+          <input name="EMAIL" type="email" required />
+        </div>
+        <div class="form_wrapper">
+          <div class="lable_wrapper">
+            <i class="bx bx-phone"></i>
+            <label for="">Phone </label>
+          </div>
+          <input name="PHONE" type="tel" required />
+        </div>
+        <div class="form_wrapper">
+          <div class="lable_wrapper">
+            <i class="bx bx-current-location"></i>
+            <label for="">Address</label>
+          </div>
+          <input name="ADDRESS" type="text" required />
+        </div>
+
+        <div class="form_wrapper">
+          <div class="lable_wrapper">
+            <i class="bx bx-message"></i>
+            <label for="">Message</label>
+          </div>
+          <textarea name="MESSAGE" rows="6"></textarea>
+        </div>
+        <div class="form_wrapper">
+          <div class="lable_wrapper">
+            <i class="bx bx-universal-access"></i>
+            <label for="">Gender</label>
+          </div>
+          <div class="gender">
+            <input value="MALE" id="male" type="radio" name="GENDER" />
+            <label for="male">Male</label>
+            <input value="female" id="female" type="radio" name="GENDER" />
+            <label  for="female">Female</label>
+          </div>
+        </div>
+        <button id="save" type="submit">Submit</button>
+        <p id="des">Form hosted and made by ranjan just for testing</p>
+      </form>
+    </main>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.7/dist/sweetalert2.all.min.js"></script>
+  </body>
+</html>

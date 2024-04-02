@@ -1,0 +1,127 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primaryClr: #db74b9;
+  --secondaryClr: #a891e3;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url(quiz.jpg) no-repeat center center/cover;
+}
+
+main {
+  background-color: white;
+  width: 90%;
+  max-width: 400px;
+  padding: 20px 30px;
+  border-radius: 5px;
+  position: relative;
+  margin-top: 2%;
+  overflow: hidden;
+  box-shadow: 0 15px 1cap #0000004a;
+}
+main::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: var(--primaryClr);
+}
+.gender{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 0;
+    font-size: 15px;
+    color: #303030;
+}
+select{
+    padding: 5px 10px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    outline: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+.lable_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.form_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+input {
+  padding: 5px 10px;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  outline: none;
+}
+textarea {
+  padding: 5px 10px;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  resize: none;
+}
+
+input:focus,
+input:valid {
+  border-color: var(--primaryClr);
+}
+
+button {
+  height: 50px;
+  border: none;
+  background-color: var(--secondaryClr);
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+svg{
+  height: 50px;
+  display: none
+}
+
+button:hover{
+    outline: 2px solid var(--primaryClr);
+}
+.loader{
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-radius: 50%;
+  border-top-color: #a891e3;
+  animation: spinner 1s linear  infinite;
+}
+@keyframes spinner {
+  from{transform: rotate(0deg);}
+  to{transform: rotate(360deg);}
+}
+
+#des{
+    text-align: center;
+    font-size: 10px;
+    margin-top: 10px;
+    color : gray;
+}
